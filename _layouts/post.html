@@ -10,4 +10,15 @@ layout: default # explicit layout for clarity
 
 {{ page.content }}
 
+<hr />
+
+<p>
+  {% if page.previous %}
+    <div>Previous Post: <a href="{{ page.previous.url }}">{{ page.previous.title }}</a></div>
+  {% endif %}
+  {% if page.next %}
+    <div>Next Post: <a href="{{ page.next.url }}">{{ page.next.title }}</a></div>
+  {% endif %}
+</p>
+
 {% include footer.html %}

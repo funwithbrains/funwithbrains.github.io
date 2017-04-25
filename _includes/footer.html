@@ -1,5 +1,5 @@
 <hr />
 
 {% for page in site.pages %}
-  <div><a href="{{ page.url }}">{{ page.title }}</a></div>
+  <div><a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></div>
 {% endfor %}

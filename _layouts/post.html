@@ -6,6 +6,9 @@ layout: default # explicit layout for clarity
 
 <p>{{ page.date | date_to_long_string }}</p>
 
+{% assign contributor = site.data.contributors[page.by] %}
+<p>By {{contributor.name}}</p>
+
 <hr />
 
 {{ page.content }}
@@ -13,11 +16,20 @@ layout: default # explicit layout for clarity
 <hr />
 
 <p>
+  Tags: 
+  {% for tag in page.tags %}
+    <a href="{{ site.baseurl }}/tags/#{{ tag | slugify }}">{{ tag }}</a>{% unless forloop.last %},{% endunless %}
+  {% endfor %}
+</p>
+
+<hr />
+
+<p>
   {% if page.previous %}
-    <div>Previous Post: <a href="{{ page.previous.url }}">{{ page.previous.title }}</a></div>
+    <div>Previous Post: <a href="{{ site.baseurl }}{{ page.previous.url }}">{{ page.previous.title }}</a></div>
   {% endif %}
   {% if page.next %}
-    <div>Next Post: <a href="{{ page.next.url }}">{{ page.next.title }}</a></div>
+    <div>Next Post: <a href="{{ site.baseurl }}{{ page.next.url }}">{{ page.next.title }}</a></div>
   {% endif %}
 </p>
 

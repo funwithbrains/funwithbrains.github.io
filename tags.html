@@ -1,0 +1,19 @@
+---
+title: Tags
+permalink: /tags/
+layout: default
+---
+
+{% for tag in site.tags %}
+  <p>
+    <h2 id="{{tag[0] | slugify}}">{{ tag[0] }}</h2>
+    <ul>
+      {% for post in tag[1] %}
+        <li><a href="{{ site.baseurl }}{{ post.url }}" title="{{ post.excerpt | truncatewords: 32 | strip_html }}">{{ post.title }}</a></li>
+      {% endfor %}
+    </ul>
+    {% unless forloop.last %}<hr />{% endunless %}
+  </p>
+{% endfor %}
+
+{% include footer.html %}

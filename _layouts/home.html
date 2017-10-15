@@ -2,16 +2,6 @@
 layout: default # explicit layout for clarity
 ---
 
-{% for post in site.posts %}
-  <h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
-  
-  <div>{{ post.date | date_to_long_string }}</div>
-  
-  <p>{{ post.excerpt | truncatewords: 32 | strip_html }}</p>
-
-  {% if post.previous != nil %}
-    <hr />
-  {% endif %}
-{% endfor %}
+{% include page_list.html pages=site.posts %}
 
 {% include footer.html %}

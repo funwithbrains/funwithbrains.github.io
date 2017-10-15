@@ -1,0 +1,15 @@
+{% for page in include.pages %}
+  <h2><a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></h2>
+  
+  {% if include.showDates != false && page.date != nil %}
+    <div>{{ page.date | date_to_long_string }}</div>
+  {% endif %}
+  
+  {% if include.showExcerpts != false && page.excerpt != nil %}
+    <p>{{ page.excerpt | truncatewords: 32 | strip_html }}</p>
+  {% endif %}
+
+  {% if page.previous != nil %}
+    <hr />
+  {% endif %}
+{% endfor %}

@@ -15,7 +15,7 @@ Every day, you vote for a player to lynch, or for No-Lynch. The No-Lynch option 
 
 Your village is without a mayor. If the day ends when there is a tie for most lynch votes, then the village will lynch one of the tied players at random.
 
-> ### How to Vote
+> ##### How to Vote
 > 
 > Vote for your lynch target by making a top-level comment on the Day post starting with "VOTE Suspect McSecretPants", except you put your target's name instead of "Suspect McSecretPants".
 >
@@ -82,7 +82,7 @@ Each of these factions is an enemy with each other faction.
 
 ### Roles
 
-> ##### Villagers (3+)
+> ##### Villagers (3 or more)
 >
 > You are a Villager. It's your duty to make sense of the evil events unfolding around you and use your gallows for great justice! There is a chance you could be The Chosen One or the Shaman, and you just don't know it yet.
 
@@ -91,6 +91,7 @@ Each of these factions is an enemy with each other faction.
 > You think you are an ordinary Villager. But in truth, you cannot be killed by Vampires! What's more, if only one Vampire survives, they cannot win without lynching you! If you are the last Villager alive when there is only one Vampire, the village wins. The Vampires and the Death Cultists already know your identity, even though you do not. If you die, everyone will learn that you were The Chosen One.
 >
 > * Vampire Resistance: If you would be killed by a Vampire ability, instead you are not.
+> * Conversion Resistance: If you would be recruited to another faction, instead you are not.
 
 > ##### Shaman (1)
 >
@@ -126,7 +127,7 @@ Each of these factions is an enemy with each other faction.
 
 > ##### The Watcher (1)
 >
-> * Desperate Search: Once per night, you may investigate one target player. You will receive results in the form of "The Chosen One"/"Not The Chosen One". If your target is The Chosen One, they will learn that you contacted them, and their role will become The Slayer.
+> * Desperate Search: Once per night, you may investigate one target player. You will receive results in the form of "The Chosen One"/"Not The Chosen One". If your target is The Chosen One, they will learn that you contacted them, and they will become The Slayer. *(The Slayer will still be The Chosen One, retaining each ability from that role.)*
 > * Paranoia Vulnerability: Be careful! If the Overzealous Paladin protects you, they will make you temporarily paranoid, and your Desperate Search for that night will result in "Not The Chosen One" no matter what!
 > * Secret Meeting: You have private communication with The Slayer.
 
@@ -143,12 +144,11 @@ Each of these factions is an enemy with each other faction.
 
 ### Factional Abilities
 
-* Dark God's Favor: When a Death Cultist dies, every faction that is an enemy of the faction that killed the Death Cultist gains one use of their Dark God's Favor ability. Those factions will not be told that they have gained this ability.
-* Dark God's Command: At the start of the game, you will learn the identity of The Chosen One. If the game has 15 or more players, you will also receive 1 false positive The Chosen One for every 2 additional players beyond 13. *(A false positive The Chosen One might have another power role.)*
-* Conversion (only usable if the game starts with 15 or more players): Once per game, during the night, one of you may recruit one target non-The-Chosen-One player to your faction. That player's role does not change, and they do not leave their original faction. *(They will retain all other abilities, including abilities of their previous faction, like private chat. This is in addition to gaining access to the Death Cult factional abilities. This player can only win if The Death Cult and their original faction both win.)*
+* Dark God's Command: At the start of the game, you will learn the identity of The Chosen One. If the game starts with 15 or more players, you will also receive 1 false positive The Chosen One for every 2 additional players beyond 13. *(Each false positive The Chosen One is selected from among the Villagers.)*
+* Conversion (only usable if the game starts with 15 or more players): Once per game, during the night, one of you may recruit one target player to your faction. *(This ability will have no effect if your target is The Chosen One.)* The target player's role does not change, and they do not leave their original faction. *(The target player will retain all other abilities, including abilities of their previous faction, like private communication. This is in addition to gaining access to the Death Cult factional abilities. This player can only win if The Death Cult and their original faction both win. This player is not obligated to share their true role or otherwise cooperate with the Death Cult.)*
 * Congregation: You have private communication with all members of your faction.
 
-**You win only if The Chosen One is eliminated and every Death Cultist is lynched, in any order. This victory does not end the game or prevent other factions from winning.**
+**You win only if The Chosen One is eliminated and every Death Cultist is lynched, in any order. *(This victory does not end the game or prevent other factions from winning.)***
 
 ### Roles
 
@@ -156,6 +156,7 @@ Each of these factions is an enemy with each other faction.
 >
 > To win, you need the town to lynch The Chosen One... AND yourself! If you die in any way other than lynching, then you lose. Whether you win or lose, the rest of the town will continue its grim struggle. Other factions can still win in addition to you winning.
 >
+> * Dark God's Favor: When you die, every enemy faction of the faction that killed you gains one use of their Dark God's Favor ability. Those factions will not be told that they have gained this ability.
 > * Ultimate Deception: Once per night, you may choose any role in the game. If you die, then your role will be revealed as the chosen role instead of the truth. *(This will not affect the outcome of investigations while you are still alive.)*
 > * Friendly Chat: Once per night, you may visit one target player. This has no effect other than giving you a target.
 
@@ -175,7 +176,7 @@ It is anti-fun to screenshot or directly quote any private message you receive i
 
 Anti-fun activities are not fun so please don't do them.
 
-Gaemmeister Daskraw has a post with these rules and more. They all are designed to put a fun in your game so do them: https://www.facebook.com/groups/550853551913154/permalink/551256721872837/
+[Gaemmeister Daskraw has a post with these rules and more. They all are designed to put a fun in your game so do them.](https://www.facebook.com/groups/550853551913154/permalink/551256721872837/)
 
 ----
 

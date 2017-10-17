@@ -25,13 +25,15 @@ Your village is without a mayor. If the day ends when there is a tie for most ly
 
 On an irregular basis, the GM will post a comment with a current summary of all votes up to that point, unless someone else has recently done so. If you believe there is an error in a vote summary as of the time it was posted, reply to let the one who posted it know.
 
-As soon as an option reaches a majority of votes, you should stop commenting on that day. The GM will not count any votes after that point, and the day will end.
-
-If a deadline arrives before you make a choice for a mandatory action, the choice will be made at random.
+Once an option reaches a majority of votes, the day will end 2 hours later. Before those 2 hours pass, you may cancel or change your vote. If any changed vote breaks the majority, the 2-hour timer is reset. Once the 2-hour timer runs out, everyone should stop commenting, the GM will not count any votes after that point, and the day will end.
 
 ----
 
 Every night, you should check in with the GM, even if you do not have any powers. The night can end after every player checks in, and no information about power roles will be leaked by the timing. If you do not check in, the night will last for 24 hours.
+
+----
+
+If a deadline arrives before you make a choice for a mandatory action, the choice will be made at random.
 
 ----
 
@@ -145,10 +147,10 @@ Each of these factions is an enemy with each other faction.
 ### Factional Abilities
 
 * Dark God's Command: At the start of the game, you will learn the identity of The Chosen One. If the game starts with 15 or more players, you will also receive 1 false positive The Chosen One for every 2 additional players beyond 13. *(Each false positive The Chosen One is selected from among the Villagers.)*
-* Conversion (only usable if the game starts with 15 or more players): Once per game, during the night, one of you may recruit one target player to your faction. *(This ability will have no effect if your target is The Chosen One.)* The target player's role does not change, and they do not leave their original faction. *(The target player will retain all other abilities, including abilities of their previous faction, like private communication. This is in addition to gaining access to the Death Cult factional abilities. This player can only win if The Death Cult and their original faction both win. This player is not obligated to share their true role or otherwise cooperate with the Death Cult.)*
+* Conversion (only usable if the game starts with 15 or more players): Once per game, during the night, one of you may recruit one target player to your faction. *(This ability will have no effect if your target is The Chosen One.)* The target player's role does not change, and they do not leave their original faction. *(The target player will retain all other abilities, including abilities of their previous faction, like private communication. This is in addition to gaining access to the Death Cult factional abilities. This player can only win if The Death Cult and their original faction both win. This player is not obligated to share their true role or otherwise cooperate with the Death Cult. The Death Cult is not obligated to tell this player the identity of The Chosen One.)*
 * Congregation: You have private communication with all members of your faction.
 
-**You win only if The Chosen One is eliminated and every Death Cultist is lynched, in any order. *(This victory does not end the game or prevent other factions from winning.)***
+**You win only if The Chosen One is eliminated and every Death Cultist is lynched, in any order.** *(This victory does not end the game or prevent other factions from winning.)*
 
 ### Roles
 
@@ -157,7 +159,7 @@ Each of these factions is an enemy with each other faction.
 > To win, you need the town to lynch The Chosen One... AND yourself! If you die in any way other than lynching, then you lose. Whether you win or lose, the rest of the town will continue its grim struggle. Other factions can still win in addition to you winning.
 >
 > * Dark God's Favor: When you die, every enemy faction of the faction that killed you gains one use of their Dark God's Favor ability. Those factions will not be told that they have gained this ability.
-> * Ultimate Deception: Once per night, you may choose any role in the game. If you die, then your role will be revealed as the chosen role instead of the truth. *(This will not affect the outcome of investigations while you are still alive.)*
+> * Ultimate Deception: At any time during the game, you may choose any role in the game. If you die, then your role will be revealed as the chosen role instead of the truth. *(This will not affect the outcome of investigations while you are still alive.)*
 > * Friendly Chat: Once per night, you may visit one target player. This has no effect other than giving you a target.
 
 ----
@@ -168,7 +170,7 @@ You will receive your role in a private message from the GM.
 
 ### Other Rules
 
-Editing or deleting posts is anti-fun. You must live with your typos for all eternity (or until the Vampires get you).
+Editing or deleting posts in-game is anti-fun. You must live with your typos for all eternity (or until the Vampires get you).
 
 It is anti-fun to communicate about the game outside of the game.
 

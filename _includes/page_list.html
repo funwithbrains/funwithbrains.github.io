@@ -1,8 +1,4 @@
 {% for page in include.pages %}
-  {% if page.previous != nil %}
-    <hr />
-  {% endif %}
-
   <h2><a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></h2>
   
   {% if include.showDates != false && page.date != nil %}
@@ -11,5 +7,9 @@
   
   {% if include.showExcerpts != false && page.excerpt != nil %}
     <p>{{ page.excerpt | truncatewords: 32 | strip_html }}</p>
+  {% endif %}
+
+  {% unless forloop.last %}
+    <hr />
   {% endif %}
 {% endfor %}

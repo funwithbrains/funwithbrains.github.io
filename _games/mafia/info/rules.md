@@ -1,6 +1,5 @@
 ---
 title: "Rules"
-layout: default
 ---
 
 ## Rules

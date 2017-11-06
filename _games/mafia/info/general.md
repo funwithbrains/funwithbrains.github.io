@@ -1,6 +1,5 @@
 ---
 title: "General Info"
-layout: default
 ---
 
 ## General Systems

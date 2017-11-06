@@ -1,6 +1,5 @@
 ---
 title: "Night System"
-layout: default
 ---
 
 ## Night System

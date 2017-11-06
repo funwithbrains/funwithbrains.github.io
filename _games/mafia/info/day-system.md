@@ -1,6 +1,5 @@
 ---
 title: "Day System"
-layout: default
 ---
 
 ## Day System

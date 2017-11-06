@@ -24,6 +24,17 @@ url: "https://funwithbrains.github.io" # the base hostname & protocol for your s
 twitter_username: funwithbrains
 github_username:  funwithbrains
 
+collections:
+  games:
+    output: true
+    permalink: /:collection/:path/
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+
 # Build settings
 repository: funwithbrains/funwithbrains.github.io
 excerpt_separator: ----
@@ -34,8 +45,8 @@ plugins:
 exclude:
   - Gemfile
   - Gemfile.lock
+  - LICENSE
+  - README.md
+  - private
+  - .vscode
 
-collections:
-  games:
-    output: true
-    permalink: /:collection/:path/

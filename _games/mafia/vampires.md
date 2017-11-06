@@ -1,6 +1,5 @@
 ---
 title: "Mafia, Vampires! Setup"
-layout: default
 ---
 
 ## Players (13 or more)

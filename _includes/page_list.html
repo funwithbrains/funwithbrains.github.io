@@ -9,7 +9,9 @@
     <p>{{ page.excerpt | truncatewords: 32 | strip_html }}</p>
   {% endif %}
 
-  {% unless forloop.last %}
-    <hr />
-  {% endunless %}
+  {% if include.showHorizontalRule != false %}
+    {% unless forloop.last %}
+      <hr />
+    {% endunless %}
+  {% endif %}
 {% endfor %}

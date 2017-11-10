@@ -1,6 +1,6 @@
 ---
-title: About
-permalink: /about/
+title: "About"
+permalink: "/about/"
 nav: true
 order: 1
 ---

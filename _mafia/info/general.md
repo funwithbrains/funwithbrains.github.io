@@ -1,5 +1,7 @@
 ---
 title: "General Info"
+type: info
+order: 1
 ---
 
 ## General Systems

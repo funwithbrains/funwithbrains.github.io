@@ -1,5 +1,7 @@
 ---
 title: "Day System"
+type: info
+order: 2
 ---
 
 ## Day System

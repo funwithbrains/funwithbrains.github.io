@@ -1,5 +1,7 @@
 ---
 title: "Rules"
+type: info
+order: 0
 ---
 
 ## Rules

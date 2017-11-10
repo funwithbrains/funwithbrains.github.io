@@ -1,0 +1,35 @@
+---
+title: "Mafia/Werewolf"
+---
+
+<p>
+  Mafia (also known as "Werewolf") is a game about logic and behavioral analysis.
+</p>
+
+<p>
+  Play it. It's fun.
+</p>
+
+<p>
+  <h2>Info</h2>
+  {% assign mafiaInfo = site.mafia | where: 'type', 'info' | sort: 'order' %}
+  {% include page_list.html
+    pages=mafiaInfo
+    showDates=false
+    showExcerpts=false
+    showHorizontalRule=false
+  %}
+</p>
+
+<hr />
+
+<p>
+  <h2>Setups</h2>
+  {% assign mafiaSetups = site.mafia | where: 'type', 'setup' | sort: 'order' %}
+  {% include page_list.html
+    pages=mafiaSetups
+    showDates=false
+    showExcerpts=false
+    showHorizontalRule=false
+  %}
+</p>

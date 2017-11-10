@@ -1,5 +1,7 @@
 ---
 title: "Night System"
+type: info
+order: 3
 ---
 
 ## Night System

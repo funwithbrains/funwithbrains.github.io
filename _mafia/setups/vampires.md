@@ -1,5 +1,7 @@
 ---
 title: "Mafia, Vampires! Setup"
+type: setup
+order: 50
 ---
 
 ## Players (13 or more)

@@ -1,5 +1,8 @@
 ---
 title: "Founders and Flavors"
+type: setup
+order: 100
+permalink: "/games/mafia/founders-and-flavors/" # temporary
 ---
 
 # Founders and Flavors (for 7 players)

@@ -25,6 +25,9 @@ twitter_username: funwithbrains
 github_username:  funwithbrains
 
 collections:
+  mafia:
+    output: true
+    permalink: /games/:collection/:path/
   games:
     output: true
     permalink: /:collection/:path/

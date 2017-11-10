@@ -1,5 +1,6 @@
 <hr />
 
-{% for page in site.pages %}
+{% assign navPages = site.pages | where: 'nav', true | sort: 'order' %}
+{% for page in navPages %}
   <div><a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></div>
 {% endfor %}

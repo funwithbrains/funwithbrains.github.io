@@ -1,6 +1,8 @@
 ---
-title: Tags
-permalink: /tags/
+title: "Tags"
+permalink: "/tags/"
+nav: true
+order: 3
 ---
 
 {% for tag in site.tags %}
@@ -14,5 +16,3 @@ permalink: /tags/
     {% unless forloop.last %}<hr />{% endunless %}
   </p>
 {% endfor %}
-
-{% include footer.html %}

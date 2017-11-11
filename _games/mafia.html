@@ -11,8 +11,7 @@ title: "Mafia/Werewolf"
 </p>
 
 <p>
-  <h2>Info</h2>
-  {% assign mafiaInfo = site.mafia | where: 'type', 'info' | sort: 'order' %}
+  {% assign mafiaInfo = site.mafia | where: 'type', 'info' %}
   {% include page_list.html
     pages=mafiaInfo
     showDates=false
@@ -25,7 +24,7 @@ title: "Mafia/Werewolf"
 
 <p>
   <h2>Setups</h2>
-  {% assign mafiaSetups = site.mafia | where: 'type', 'setup' | sort: 'order' %}
+  {% assign mafiaSetups = site.mafia | where: 'type', 'setup' %}
   {% include page_list.html
     pages=mafiaSetups
     showDates=false

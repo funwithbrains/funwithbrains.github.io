@@ -1,4 +1,5 @@
-{% for page in include.pages %}
+{% assign pages = include.pages | sort: 'order' %}
+{% for page in pages %}
   <h2><a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></h2>
   
   {% if include.showDates != false && page.date != nil %}

@@ -1,46 +1,14 @@
 ---
-title: "Mafia, Vampires! Setup"
+title: "Vampires!"
 type: setup
 order: 50
 ---
 
-## Players (13 or more)
-
-----
-
-## The Setup
-
 Your village is aghast to find the mayor dead in the park, drained of all blood. Must be vampires! Only explanation! Panic ensues.
 
-Every day, you vote for a player to lynch, or for No-Lynch. The No-Lynch option will not be available when a player has been killed the previous night. *(No-Lynch is available on Day 1, because apparently no one really liked the mayor.)* Each day ends when one voting option has a majority of votes, or after 72 hours pass.
+Every day, you vote for a player to lynch, or for No-Lynch. The No-Lynch option will not be available when a player has been killed the previous night. *(No-Lynch is available on Day 1, because apparently no one really liked the mayor.)*
 
 Your village is without a mayor. If the day ends when there is a tie for most lynch votes, then the village will lynch one of the tied players at random.
-
-> ##### How to Vote
-> 
-> Vote for your lynch target by making a top-level comment on the Day post starting with "VOTE Suspect McSecretPants", except you put your target's name instead of "Suspect McSecretPants".
->
-> Whenever you cast a new vote, you cancel your previous vote.
->
-> If you want to cancel your vote without making a new one, start your comment with something like "UNVOTE". Your vote comments don't need to be perfect. The GM will be reading these by sight.
-
-On an irregular basis, the GM will post a comment with a current summary of all votes up to that point, unless someone else has recently done so. If you believe there is an error in a vote summary as of the time it was posted, reply to let the one who posted it know.
-
-Once an option reaches a majority of votes, the day will end 2 hours later. Before those 2 hours pass, you may cancel or change your vote. If any changed vote breaks the majority, the 2-hour timer is reset. Once the 2-hour timer runs out, everyone should stop commenting, the GM will not count any votes after that point, and the day will end.
-
-----
-
-Every night, you should check in with the GM, even if you do not have any powers. The night can end after every player checks in, and no information about power roles will be leaked by the timing. If you do not check in, the night will last for 24 hours.
-
-----
-
-If a deadline arrives before you make a choice for a mandatory action, the choice will be made at random.
-
-----
-
-Whenever you die, no matter how you die, your role will be revealed to the town, even if you yourself didn't know it yet.
-
-You will be able to distinguish death-by-Vampire from death-by-Slayer.
 
 ----
 
@@ -58,17 +26,16 @@ Each of these factions is an enemy with each other faction.
 
 ### Factional Abilities
 
-* Drain: Once per night, one of you may kill one target non-Vampire player.
-* Hypnosis: Once per night, one of you may roleblock one target player.
-* Dark God's Favor (usable once for every Death Cultist killed by an enemy faction): During the night, you may choose a target and choose a role. If the chosen role belongs to the chosen target, then you must use your Drain ability on that target as if you had not already used your Drain ability tonight. You will not be told how many uses of Dark God's Favor are available.
+* Drain: Once per night, one of you may kill one target non-Vampire player. It will be obvious that the death was caused by the Vampires.
+* Hypnosis: Once per night, one of you may cancel one target player's night plan.
 * Congregation: You have private communication with all members of your faction.
-* Omen: At the start of the game, you will learn the identity of The Chosen One.
+* Perfect Hypnosis: If the town has helped the Scions of Death to die, then the Dark God will empower your Hypnosis to help the town die. Whenever you use Hypnosis, you may choose a role and a valid night plan for the chosen role. If the target of Hypnosis has the chosen role and the town has the Dark God's Favor, then instead of Hypnosis preventing the target's night plan, it will force the target to follow the night plan you chose.
 
-**You win when your faction comprises at least half of the village, or if nothing can stop this from happening.**
+**If the last survivors are The Chosen One and a single Vampire, you lose. Otherwise, you win when your faction comprises at least half of the village, or if nothing can stop this from happening.**
 
 ### Roles
 
-> #### Vampires (3)
+> #### Vampire
 > 
 > You are a Vampire! Your goal is to take over the village and drain every mortal therein. But for now, the villagers outnumber you. You will need to blend in while you thin the herd.
 
@@ -79,47 +46,46 @@ Each of these factions is an enemy with each other faction.
 ### Factional Abilities
 
 * Lynch: Once per day, you must lynch one player or select No Lynch. However, if a player was killed the previous night, then the No Lynch option will be banned for the day.
-* Dark God's Favor (usable once for every Death Cultist killed by an enemy faction): On the next night, if the Overzealous Paladin is alive, no one can become paranoid. If the Overzealous Paladin is dead, everyone is protected from a single Vampire kill that night.
+* The Dark God's Favor *(active only after at least half the Scions of Death are killed by your faction)*: The Dark God is grateful for your service and wants to help you die. The Vampires will be able to use their Perfect Hypnosis ability.
 
-**You win when all Vampires have been eliminated, no matter the cost.**
+**You win when all Vampires have been eliminated, no matter the cost. You also win if the last survivors are The Chosen One and a single Vampire.**
 
 ### Roles
 
-> ##### Villagers (3 or more)
+> ##### Villagers
 >
 > You are a Villager. It's your duty to make sense of the evil events unfolding around you and use your gallows for great justice! There is a chance you could be The Chosen One or the Shaman, and you just don't know it yet.
 
-> ##### The Chosen One (1)
+> ##### The Chosen One
 >
-> You think you are an ordinary Villager. But in truth, you cannot be killed by Vampires! What's more, if only one Vampire survives, they cannot win without lynching you! If you are the last Villager alive when there is only one Vampire, the village wins. The Vampires and the Death Cultists already know your identity, even though you do not. If you die, everyone will learn that you were The Chosen One.
+> You think you are an ordinary Villager. But in truth, you cannot be killed by Vampires! What's more, if only one Vampire survives, they cannot win without lynching you! If you are the last Villager alive when there is only one Vampire, the village wins. The Scions of Death already know your identity, even though you do not. If you die, everyone will learn that you were The Chosen One.
 >
 > * Vampire Resistance: If you would be killed by a Vampire ability, instead you are not.
 > * Conversion Resistance: If you would be recruited to another faction, instead you are not.
 
-> ##### Shaman (1)
+> ##### Shaman
 >
 > You think you are an ordinary Villager. That is, until you begin to hear the voices of the dead. If you die, everyone will learn that you were the Shaman.
 >
 > * Paranormal Awareness: You have private communication with everyone who has died.
 
-> ##### Priest (1)
+> ##### Priest
 >
 > You are the Priest. While you have no ability to fight off evil, you do have the skills to detect it.
 >
 > * Investigation: Once per night, you may investigate one target player. You will receive results in the form of "Vampire"/"Not a Vampire".
 > * Paranoia Vulnerability: Be careful! If the Overzealous Paladin protects you, they will make you temporarily paranoid, and your Investigation for that night will result in "Vampire" no matter what!
 
-> ##### Overzealous Paladin (1)
+> ##### Overzealous Paladin
 >
 > You are the Paladin. While you have no ability to detect evil, you do have the skills to fight it.
 >
 > * Overzealous Protection: Once per night, you must protect one target player. Your target is protected from one kill by Vampires that night.
 > * Contagious Paranoia: Be careful! If you protect anyone who has Paranoia Vulnerability, you make them paranoid, and their actions that night will work incorrectly!
 
-> ##### Guard Captain (1)
+> ##### Guard Captain
 >
-> * Recruitment: Once per night, you may recruit another target player as a temporary Guard. This does not interfere with any other actions the target player would take.
-> * Observation: Once per night, you may follow one target player. You will see who their targets are, if any, but you will not learn what actions they performed.
+> * Recruitment: Twice per night, you may recruit another target player as a temporary Guard. This does not interfere with any other actions the target player would take. In a single night, you may not choose any single player more than once to recruit or to be followed. *(The village charter won't let you recruit anyone for a double shift, and it also won't let you have your guards followed or doubled up watching the same person. Those bureaucrats just don't understand what it's like on the streets!)*
 > * Paranoia Vulnerability: Be careful! If the Overzealous Paladin protects you, they will make you temporarily paranoid, and you will be unable to use your Recruitment that night!
 
 > ##### Guard (temporary only)
@@ -128,17 +94,17 @@ Each of these factions is an enemy with each other faction.
 >
 > * Mandatory Observation: Tonight, you must follow a target player chosen for you by the Guard Captain. You will see who your target's targets are, if any, but you will not learn what actions they performed. *(This does not interfere with any actions you take using your original role.)*
 
-> ##### The Watcher (1)
+> ##### The Watcher
 >
-> * Desperate Search: Once per night, you may investigate one target player. You will receive results in the form of "The Chosen One"/"Not The Chosen One". If your target is The Chosen One, they will learn that you contacted them, and they will become The Slayer. *(The Slayer will still be The Chosen One, retaining each ability from that role.)*
+> * Desperate Search: Once per night, you may investigate one target player. You will receive results in the form of "The Chosen One"/"Not The Chosen One". If your target is The Chosen One, they will learn that you contacted them, and they will become The Slayer in addition to their current role. *(The Slayer will still be The Chosen One, retaining each ability from that role.)*
 > * Paranoia Vulnerability: Be careful! If the Overzealous Paladin protects you, they will make you temporarily paranoid, and your Desperate Search for that night will result in "Not The Chosen One" no matter what!
 > * Secret Meeting: You have private communication with The Slayer.
 
-> ##### The Slayer (0 at start)
+> ##### The Slayer (none at start)
 >
 > You have always been The Chosen One. You have all the benefits of The Chosen One, and you can also slay vampires.
 >
-> * Slay Vampire: Once per night, you may kill one target player. But be careful! If your target is not a Vampire, you are overcome by grief and will die as if you were lynched — just what the Death Cult wants!
+> * Slay: Once per night, you may kill one target player. It will be obvious that the death was caused by the Slayer.
 > * Secret Meeting: You have private communication with The Watcher.
 
 ----
@@ -147,39 +113,72 @@ Each of these factions is an enemy with each other faction.
 
 ### Factional Abilities
 
-* Dark God's Command: At the start of the game, you will learn the identity of The Chosen One. If the game starts with 15 or more players, you will also receive 1 false positive The Chosen One for every 2 additional players beyond 13. *(Each false positive The Chosen One is selected from among the Villagers.)*
-* Conversion (only usable if the game starts with 15 or more players): Once per game, during the night, one of you may recruit one target player to your faction. *(This ability will have no effect if your target is The Chosen One.)* The target player's role does not change, and they do not leave their original faction. *(The target player will retain all other abilities, including abilities of their previous faction, like private communication. This is in addition to gaining access to the Death Cult factional abilities. This player can only win if The Death Cult and their original faction both win. This player is not obligated to share their true role or otherwise cooperate with the Death Cult. The Death Cult is not obligated to tell this player the identity of The Chosen One.)*
-* Congregation: You have private communication with all members of your faction.
+* Dark God's Command: At the start of the game, you will learn the identity of The Chosen One.
+* Conversion (only usable if the game starts with 15 or more players): Once per game, during the night, one of you may recruit one target player to your faction. *(This ability will have no effect if your target is The Chosen One.)* The target player's role does not change. *(The target player will not lose their abilities.)* If the target is a member of the town faction, then they leave the town faction and exclusively join the Death Cult. Otherwise, they join the Death Cult in addition to their current faction. *(In this case, they will keep the abilities of their previous faction, like private communication. This is in addition to gaining access to the Death Cult factional abilities. This player can only win if The Death Cult and their original faction both win. The recruited player is not obligated to disclose their true role or otherwise cooperate with the Death Cult. The Death Cult is not obligated to tell this player the identity of The Chosen One.)*
+* Congregation: You have private communication with all living and dead members of your faction.
 
-**You win only if The Chosen One is eliminated and every Death Cultist is lynched, in any order.** *(This victory does not end the game or prevent other factions from winning.)*
+**You win when The Chosen One is eliminated and more than half of the Scions of Death have been killed by the town, in any order. *(This victory does not end the game or prevent other factions from winning.)***
 
 ### Roles
 
-> ##### Death Cultist (1)
+> ##### Scion of Death
 >
-> To win, you need the town to lynch The Chosen One... AND yourself! If you die in any way other than lynching, then you lose. Whether you win or lose, the rest of the town will continue its grim struggle. Other factions can still win in addition to you winning.
+> To win, you need the town to lynch The Chosen One... AND yourself! If you die in any way other than lynching, you are likely (or guaranteed!) to lose. (You can also win if the Slayer kills you at night.) Whether you win or lose, the rest of the town will continue its grim struggle. Other factions can still win in addition to you winning.
 >
-> * Dark God's Favor: When you die, every enemy faction of the faction that killed you gains one use of their Dark God's Favor ability. Those factions will not be told that they have gained this ability.
-> * Ultimate Deception: At any time during the game, you may choose any role in the game. If you die, then your role will be revealed as the chosen role instead of the truth. *(This will not affect the outcome of investigations while you are still alive.)*
+> * Dark God's Favor: Whenever a faction has killed at least half of the Scions of Death in the game, that faction gains their Dark God's Favor ability, if they have one. No one will be explicitly told if anyone has gained this ability.
+> * Ultimate Deception: At any time, you may choose any role in the game. If you die, then your role will be revealed as the chosen role instead of the truth. *(This will not affect the outcome of investigations while you are still alive.)*
 > * Friendly Chat: Once per night, you may visit one target player. This has no effect other than giving you a target.
 
 ----
 
-You will receive your role in a private message from the GM.
+## Game Settings
+
+* General
+  * Death Reveal Interference
+* Day
+  * Panic Lynch
+  * 72-Hour Deadline
+  * 24-Hour Delayed Majority Close
+  * Push Lynch
+  * Random Tiebreak
+* Night
+  * Check-In
+  * 24-Hour Deadline
 
 ----
 
-### Other Rules
+## Assigning Roles
 
-Editing or deleting posts in-game is anti-fun. You must live with your typos for all eternity (or until the Vampires get you).
+The GM should secretly shuffle the list of players, then assign each player the role corresponding to their position in the shuffled list. Players should not be allowed to see the shuffled list until after the game, of course.
 
-It is anti-fun to communicate about the game outside of the game.
+The minimum recommended number of players is 13.
 
-It is anti-fun to screenshot or directly quote any private message you receive in-game. You may paraphrase, as long as you are sure you are not directly quoting. The important thing is, meta-game proof is bad for the game.
-
-Anti-fun activities are not fun so please don't do them.
-
-[Gaemmeister Daskraw has a post with these rules and more. They all are designed to put a fun in your game so do them.](https://www.facebook.com/groups/550853551913154/permalink/551256721872837/)
-
-----
-
+1. Vampire
+2. Vampire
+3. The Chosen One
+4. Shaman
+5. Priest
+6. Overzealous Paladin
+7. Guard Captain
+8. Villager
+9. Villager
+10. Villager
+11. Vampire
+12. Villager
+13. Scion of Death
+14. The Watcher
+15. Villager
+16. Villager
+17. Scion of Death
+18. Villager
+19. Villager
+20. Villager
+21. Scion of Death
+22. Villager
+23. Villager
+24. Villager
+25. Scion of Death
+26. Villager
+27. Villager
+28. Vampire
+29. Scion of Death

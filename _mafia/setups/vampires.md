@@ -29,7 +29,7 @@ Each of these factions is an enemy with each other faction.
 * Drain: Once per night, one of you may kill one target non-Vampire player. It will be obvious that the death was caused by the Vampires.
 * Hypnosis: Once per night, one of you may cancel one target player's night plan.
 * Congregation: You have private communication with all members of your faction.
-* Perfect Hypnosis: If the town has helped the Scions of Death to die, then the Dark God will empower your Hypnosis to help the town die. Whenever you use Hypnosis, you may choose a role and a valid night plan for the chosen role. If the target of Hypnosis has the chosen role and the town has the Dark God's Favor, then instead of Hypnosis preventing the target's night plan, it will force the target to follow the night plan you chose.
+* Perfect Hypnosis: If the village has helped the Scions of Death to die, then the Dark God will empower your Hypnosis to help the village die. Whenever you use Hypnosis, you may choose a role and a valid night plan for the chosen role. If the target of Hypnosis has the chosen role and the village has the Dark God's Favor, then instead of Hypnosis preventing the target's night plan, it will force the target to follow the night plan you chose.
 
 **If the last survivors are The Chosen One and a single Vampire, you lose. Otherwise, you win when your faction comprises at least half of the village, or if nothing can stop this from happening.**
 
@@ -85,6 +85,8 @@ Each of these factions is an enemy with each other faction.
 
 > ##### Guard Captain
 >
+> You are the Guard Captain. You recruit the locals to help you monitor the Village.
+>
 > * Recruitment: Twice per night, you may recruit another target player as a temporary Guard. This does not interfere with any other actions the target player would take. In a single night, you may not choose any single player more than once to recruit or to be followed. *(The village charter won't let you recruit anyone for a double shift, and it also won't let you have your guards followed or doubled up watching the same person. Those bureaucrats just don't understand what it's like on the streets!)*
 > * Paranoia Vulnerability: Be careful! If the Overzealous Paladin protects you, they will make you temporarily paranoid, and you will be unable to use your Recruitment that night!
 
@@ -95,6 +97,8 @@ Each of these factions is an enemy with each other faction.
 > * Mandatory Observation: Tonight, you must follow a target player chosen for you by the Guard Captain. You will see who your target's targets are, if any, but you will not learn what actions they performed. *(This does not interfere with any actions you take using your original role.)*
 
 > ##### The Watcher
+>
+> You are the Watcher. You are charged with the task of finding The Chosen One and guiding them to protect the innocent from Vampires.
 >
 > * Desperate Search: Once per night, you may investigate one target player. You will receive results in the form of "The Chosen One"/"Not The Chosen One". If your target is The Chosen One, they will learn that you contacted them, and they will become The Slayer in addition to their current role. *(The Slayer will still be The Chosen One, retaining each ability from that role.)*
 > * Paranoia Vulnerability: Be careful! If the Overzealous Paladin protects you, they will make you temporarily paranoid, and your Desperate Search for that night will result in "Not The Chosen One" no matter what!
@@ -114,16 +118,16 @@ Each of these factions is an enemy with each other faction.
 ### Factional Abilities
 
 * Dark God's Command: At the start of the game, you will learn the identity of The Chosen One.
-* Conversion (only usable if the game starts with 15 or more players): Once per game, during the night, one of you may recruit one target player to your faction. *(This ability will have no effect if your target is The Chosen One.)* The target player's role does not change. *(The target player will not lose their abilities.)* If the target is a member of the town faction, then they leave the town faction and exclusively join the Death Cult. Otherwise, they join the Death Cult in addition to their current faction. *(In this case, they will keep the abilities of their previous faction, like private communication. This is in addition to gaining access to the Death Cult factional abilities. This player can only win if The Death Cult and their original faction both win. The recruited player is not obligated to disclose their true role or otherwise cooperate with the Death Cult. The Death Cult is not obligated to tell this player the identity of The Chosen One.)*
+* Conversion (only usable if the game starts with 15 or more players): Once per game, during the night, one of you may recruit one target player to your faction. *(This ability will have no effect if your target is The Chosen One.)* The target player's role does not change. *(The target player will not lose their abilities.)* If the target is a member of the village faction, then they leave the village faction and exclusively join the Death Cult. Otherwise, they join the Death Cult in addition to their current faction. *(In this case, they will keep the abilities of their previous faction, like private communication. This is in addition to gaining access to the Death Cult factional abilities. This player can only win if The Death Cult and their original faction both win. The recruited player is not obligated to disclose their true role or otherwise cooperate with the Death Cult. The Death Cult is not obligated to tell this player the identity of The Chosen One.)*
 * Congregation: You have private communication with all living and dead members of your faction.
 
-**You win when The Chosen One is eliminated and more than half of the Scions of Death have been killed by the town, in any order. *(This victory does not end the game or prevent other factions from winning.)***
+**You win when The Chosen One is eliminated and more than half of the Scions of Death have been killed by the village, in any order. *(This victory does not end the game or prevent other factions from winning.)***
 
 ### Roles
 
 > ##### Scion of Death
 >
-> To win, you need the town to lynch The Chosen One... AND yourself! If you die in any way other than lynching, you are likely (or guaranteed!) to lose. (You can also win if the Slayer kills you at night.) Whether you win or lose, the rest of the town will continue its grim struggle. Other factions can still win in addition to you winning.
+> You are a Scion of Death! To win, you need the village to lynch The Chosen One... AND yourself! If you die in any way other than lynching, you are likely (or guaranteed!) to lose. (You can also win if the Slayer kills you at night.) Whether you win or lose, the rest of the village will continue its grim struggle. Other factions can still win in addition to you winning.
 >
 > * Dark God's Favor: Whenever a faction has killed at least half of the Scions of Death in the game, that faction gains their Dark God's Favor ability, if they have one. No one will be explicitly told if anyone has gained this ability.
 > * Ultimate Deception: At any time, you may choose any role in the game. If you die, then your role will be revealed as the chosen role instead of the truth. *(This will not affect the outcome of investigations while you are still alive.)*

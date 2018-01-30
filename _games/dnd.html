@@ -1,0 +1,326 @@
+---
+title: "Dungeons & Dragons, 4e Character Sheet"
+---
+
+<table data-bind="with: character">
+  <thead></thead>
+  <tbody>
+      <tr>
+          <td colspan="999">
+              <table class="fillSpace">
+                  <thead>
+                      <tr>
+                          <th>Name</th>
+                          <th>Level</th>
+                          <th>Class</th>
+                          <th>Paragon Path</th>
+                          <th>Epic Destiny</th>
+                          <th>Experience</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td><input type="text" data-bind="value: name" /></td>
+                          <td><input type="text" data-bind="numericValue: level" /></td>
+                          <td><input type="text" data-bind="value: $data['class']" /></td>
+                          <td><input type="text" data-bind="value: paragonPath" /></td>
+                          <td><input type="text" data-bind="value: epicDestiny" /></td>
+                          <td><input type="text" data-bind="numericValue: experience" /></td>
+                      </tr>
+                  </tbody>
+              </table>
+          </td>
+      </tr>
+      <tr>
+          <td colspan="999">
+              <table class="fillSpace">
+                  <thead>
+                      <tr>
+                          <th>Race</th>
+                          <th>Size</th>
+                          <th>Gender</th>
+                          <th>Age</th>
+                          <th>Height</th>
+                          <th>Weight</th>
+                          <th>Alignment</th>
+                          <th>Deity</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td><input type="text" data-bind="value: race" /></td>
+                          <td><input type="text" data-bind="value: size" /></td>
+                          <td><input type="text" data-bind="value: gender" /></td>
+                          <td><input type="text" data-bind="numericValue: age" /></td>
+                          <td><input type="text" data-bind="value: height" /></td>
+                          <td><input type="text" data-bind="value: weight" /></td>
+                          <td><input type="text" data-bind="value: alignment" /></td>
+                          <td><input type="text" data-bind="value: deity" /></td>
+                      </tr>
+                  </tbody>
+              </table>
+          </td>
+      </tr>
+      <tr>
+          <th>Initiative</th>
+          <td data-bind="text: initiative"></td>
+          <td>Misc <input type="text" data-bind="numericValue: miscInitiative" /></td>
+      </tr>
+      <tr>
+          <th>Speed</th>
+          <td data-bind="text: speed"></td>
+          <td>Base <input type="text" data-bind="numericValue: baseSpeed" /></td>
+          <td>Armor <input type="text" data-bind="numericValue: armorSpeedBonus" /></td>
+          <td>Item <input type="text" data-bind="numericValue: itemSpeedBonus" /></td>
+          <td>Misc <input type="text" data-bind="numericValue: miscSpeedBonus" /></td>
+      </tr>
+      <tr>
+          <td colspan="999">
+              <table>
+                  <thead>
+                      <tr>
+                          <th>Ability</th>
+                          <th>Score</th>
+                          <th>Mod</th>
+                          <th>Check</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <th>STR</th>
+                          <td><input type="text" data-bind="numericValue: str" /></td>
+                          <td data-bind="text: strMod"></td>
+                          <td data-bind="text: strCheck"></td>
+                      </tr>
+                      <tr>
+                          <th>CON</th>
+                          <td><input type="text" data-bind="numericValue: con" /></td>
+                          <td data-bind="text: conMod"></td>
+                          <td data-bind="text: conCheck"></td>
+                      </tr>
+                      <tr>
+                          <th>DEX</th>
+                          <td><input type="text" data-bind="numericValue: dex" /></td>
+                          <td data-bind="text: dexMod"></td>
+                          <td data-bind="text: dexCheck"></td>
+                      </tr>
+                      <tr>
+                          <th>INT</th>
+                          <td><input type="text" data-bind="numericValue: int" /></td>
+                          <td data-bind="text: intMod"></td>
+                          <td data-bind="text: intCheck"></td>
+                      </tr>
+                      <tr>
+                          <th>WIS</th>
+                          <td><input type="text" data-bind="numericValue: wis" /></td>
+                          <td data-bind="text: wisMod"></td>
+                          <td data-bind="text: wisCheck"></td>
+                      </tr>
+                      <tr>
+                          <th>CHA</th>
+                          <td><input type="text" data-bind="numericValue: cha" /></td>
+                          <td data-bind="text: chaMod"></td>
+                          <td data-bind="text: chaCheck"></td>
+                      </tr>
+                  </tbody>
+              </table>
+          </td>
+      </tr>
+      <tr>
+          <td colspan="999">
+              <table>
+                  <thead>
+                      <tr>
+                          <th>Defense</th>
+                          <th>Score</th>
+                          <th>Class</th>
+                          <th>Feat</th>
+                          <th>Enh</th>
+                          <th>Misc</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <th>AC</th>
+                          <td data-bind="text: ac"></td>
+                          <td><input type="text" data-bind="numericValue: classAC" /></td>
+                          <td><input type="text" data-bind="numericValue: featAC" /></td>
+                          <td><input type="text" data-bind="numericValue: enhancementAC" /></td>
+                          <td><input type="text" data-bind="numericValue: miscAC" /></td>
+                          <td>
+                              Armor
+                              <input type="text" data-bind="numericValue: armorAC" />
+                          </td>
+                          <td>
+                              Shield
+                              <input type="text" data-bind="numericValue: shieldAC" />
+                          </td>
+                          <td>
+                              Heavy Armor
+                              <input type="checkbox" data-bind="checked: isWearingHeavyArmor" />
+                          </td>
+                      </tr>
+                      <tr>
+                          <th>FORT</th>
+                          <td data-bind="text: fort"></td>
+                          <td><input type="text" data-bind="numericValue: classFort" /></td>
+                          <td><input type="text" data-bind="numericValue: featFort" /></td>
+                          <td><input type="text" data-bind="numericValue: enhancementFort" /></td>
+                          <td><input type="text" data-bind="numericValue: miscFort" /></td>
+                      </tr>
+                      <tr>
+                          <th>REF</th>
+                          <td data-bind="text: ref"></td>
+                          <td><input type="text" data-bind="numericValue: classRef" /></td>
+                          <td><input type="text" data-bind="numericValue: featRef" /></td>
+                          <td><input type="text" data-bind="numericValue: enhancementRef" /></td>
+                          <td><input type="text" data-bind="numericValue: miscRef" /></td>
+                      </tr>
+                      <tr>
+                          <th>WILL</th>
+                          <td data-bind="text: will"></td>
+                          <td><input type="text" data-bind="numericValue: classWill" /></td>
+                          <td><input type="text" data-bind="numericValue: featWill" /></td>
+                          <td><input type="text" data-bind="numericValue: enhancementWill" /></td>
+                          <td><input type="text" data-bind="numericValue: miscWill" /></td>
+                      </tr>
+                  </tbody>
+              </table>
+          </td>
+      </tr>
+      <tr>
+          <td colspan="999">
+              <table>
+                  <thead>
+                      <tr>
+                          <th>Max HP</th>
+                          <th>HP</th>
+                          <th>Bloodied</th>
+                          <th>Surge Value</th>
+                          <th>Surges Per Day</th>
+                          <th>Surges</th>
+                          <th>Class Base HP</th>
+                          <th>Class HP Per Level</th>
+                          <th>Misc HP Bonus</th>
+                          <th>Class Base Surges Per Day</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td data-bind="text: maxHP"></td>
+                          <td><input type="text" data-bind="numericValue: currentHP" /></td>
+                          <td data-bind="text: bloodiedHP"></td>
+                          <td data-bind="text: surgeValue"></td>
+                          <td data-bind="text: surgesPerDay"></td>
+                          <td><input type="text" data-bind="numericValue: surges" /></td>
+                          <td><input type="text" data-bind="numericValue: classBaseHP" /></td>
+                          <td><input type="text" data-bind="numericValue: classHPPerLevel" /></td>
+                          <td><input type="text" data-bind="numericValue: miscHPBonus" /></td>
+                          <td><input type="text" data-bind="numericValue: classBaseSurgesPerDay" /></td>
+                      </tr>
+                  </tbody>
+              </table>
+          </td>
+      </tr>
+      <tr>
+          <th>At-Will Powers</th>
+          <td colspan="999"><textarea data-bind="value: atWillPowers"></textarea></td>
+      </tr>
+      <tr>
+          <th>Encounter Powers</th>
+          <td colspan="999"><textarea data-bind="value: encounterPowers"></textarea></td>
+      </tr>
+      <tr>
+          <th>Daily Powers</th>
+          <td colspan="999"><textarea data-bind="value: dailyPowers"></textarea></td>
+      </tr>
+      <tr>
+          <th>Utility Powers</th>
+          <td colspan="999"><textarea data-bind="value: utilityPowers"></textarea></td>
+      </tr>
+      <tr>
+          <td colspan="999">
+              <table>
+                  <thead>
+                      <tr>
+                          <th>Name</th>
+                          <th>Value</th>
+                          <th>Trained</th>
+                          <th>Misc</th>
+                      </tr>
+                  </thead>
+                  <tbody data-bind="foreach: skills">
+                      <tr>
+                          <th data-bind="text: name"></th>
+                          <td data-bind="text: value"></td>
+                          <td><input type="checkbox" data-bind="checked: isTrained" /></td>
+                          <td><input type="text" data-bind="numericValue: misc" /></td>
+                      </tr>
+                  </tbody>
+              </table>
+          </td>
+      </tr>
+      <tr>
+          <th>Armor Check Penalty</th>
+          <td colspan="999"><input type="text" data-bind="numericValue: armorCheckPenalty" /></td>
+      </tr>
+      <tr>
+          <th>Notes</th>
+          <td colspan="999"><textarea data-bind="value: notes"></textarea></td>
+      </tr>
+      <tr>
+          <th>Inventory</th>
+          <td colspan="999"><textarea data-bind="value: inventory"></textarea></td>
+      </tr>
+      <tr>
+          <th>Action Points</th>
+          <td colspan="999"><input type="text" data-bind="numericValue: actionPoints" /></td>
+      </tr>
+      <tr>
+          <th>Feats</th>
+          <td colspan="999"><textarea data-bind="value: feats"></textarea></td>
+      </tr>
+      <tr>
+          <th>Race Features</th>
+          <td colspan="999"><textarea data-bind="value: raceFeatures"></textarea></td>
+      </tr>
+      <tr>
+          <th>Class Features</th>
+          <td colspan="999"><textarea data-bind="value: classFeatures"></textarea></td>
+      </tr>
+      <tr>
+          <th>Languages</th>
+          <td><input type="text" data-bind="value: languages" /></td>
+      </tr>
+      <tr>
+          <th>Player Name</th>
+          <td><input type="text" data-bind="value: playerName" /></td>
+      </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<table>
+  <thead>
+      <tr>
+          <th>JSON Out</th>
+          <th>JSON In</th>
+      </tr>
+  </thead>
+  <tbody>
+      <td>
+          <textarea readonly="true" data-bind="value: ko.toJSON(character)"></textarea>
+      </td>
+      <td>
+          <textarea data-bind="value: jsonInput"></textarea>
+      </td>
+      <td><input type="button" value="Read JSON In" data-bind="click: readJSONInput" /></td>
+  </tbody>
+</table>
+
+<script
+type="text/javascript"
+src="/assets/scripts/lib/require.js"
+data-main="/assets/scripts/main.js"
+></script>

@@ -309,13 +309,11 @@ title: "Dungeons & Dragons, 4e Character Sheet"
       </tr>
   </thead>
   <tbody>
-      <td>
-          <textarea readonly="true" data-bind="value: ko.toJSON(character)"></textarea>
-      </td>
-      <td>
-          <textarea data-bind="value: jsonInput"></textarea>
-      </td>
-      <td><input type="button" value="Read JSON In" data-bind="click: readJSONInput" /></td>
+    <td><input type="button" value="Save Character" data-bind="click: saveCharacter" /></td>
+    <td>
+      <input type="file" data-bind="event: { change: () => { $data.characterFiles($element.files) } }" />
+      <input type="button" value="Load Character" data-bind="click: loadCharacter" />
+    </td>
   </tbody>
 </table>
 

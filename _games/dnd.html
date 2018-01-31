@@ -304,15 +304,20 @@ title: "Dungeons & Dragons, 4e Character Sheet"
 <table>
   <thead>
       <tr>
-          <th>JSON Out</th>
-          <th>JSON In</th>
+          <th>Export/Import</th>
       </tr>
   </thead>
   <tbody>
-    <td><input type="button" value="Save Character" data-bind="click: saveCharacter" /></td>
+    <td><input type="button" value="Export Character" data-bind="click: saveCharacter" /></td>
     <td>
-      <input type="file" data-bind="event: { change: () => { $data.characterFiles($element.files) } }" />
-      <input type="button" value="Load Character" data-bind="click: loadCharacter" />
+      <label>
+        Import Character
+        <input type="file" data-bind="event: {
+          change: () => {
+            loadCharacter($element.files[0]);
+          }
+        }" />
+      </label>
     </td>
   </tbody>
 </table>

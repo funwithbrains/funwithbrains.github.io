@@ -1,9 +1,10 @@
 define([
-  'underscore', './knockout', './jquery-2.1.4.min', './filesaver'
+  'underscore', './knockout', './jquery-2.1.4.min', './filesaver', './persist'
 ], (
-  _, ko, jQuery, saveAs
+  _, ko, jQuery, saveAs, Persist
 ) => {
   // underscore's `define` call is broken, but we worked around it
+  // TODO stop modifying imported libraries directly to add AMD support, start using shim config
 
   ko.bindingHandlers.numericValue = {
     init : function(element, valueAccessor, allBindings, data, context) {
@@ -26,6 +27,7 @@ define([
     ko,
     $: jQuery,
     jQuery,
-    saveAs
+    saveAs,
+    Persist
   };
 });

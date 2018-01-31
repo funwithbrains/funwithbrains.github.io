@@ -7,7 +7,26 @@ window.requirejs.config({
 require(['lib/index'], (lib) => {
   window.lib = lib;
 
-  const { _, ko, saveAs } = lib;
+  const { _, ko, saveAs, Persist } = lib;
+
+  const store = new Persist.Store('DungeonsAndDragons4eCharacterSheets');
+  const ids = _.filter(JSON.parse(store.get('_ids'))) || [];
+  console.log(ids);
+  const insertId = (id) => {
+    if (!id || _.contains(ids, id)) { return; }
+
+    ids.push(id);
+    store.set('_ids', JSON.stringify(ids));
+  };
+  const removeId = (id) => {
+    if (!id) { return; }
+
+    store.set('_ids', JSON.stringify(
+      _.filter(ids, (otherId) => id !== otherId)
+    ));
+  };
+  const createId = () => `${Date.now()}|${Math.random()}`;
+  var latestId = store.get('_latestId') || null;
 
   const createObservable = (model, options) => {
     if (_.isFunction(options)) {
@@ -244,15 +263,26 @@ require(['lib/index'], (lib) => {
     
     notes: ''
   };
-  const createCharacter = () => createModel(characterDescriptor);
+  const createCharacter = () => {
+    const character = createModel(characterDescriptor);
+    character._id = null; // Do not save.
+    return character;
+  };
 
   const character = ko.observable(createCharacter());
 
   const setCharacter = (character) => {
-    var modelCharacter = model.character();
-    fillModel(modelCharacter, character);
+    const id = character._id;
+    if (latestId !== id) {
+      latestId = id;
+      store.set('_latestId', latestId);
+    }
 
-    var modelSkills = modelCharacter.skills(); 
+    var characterModel = model.character();
+    characterModel._id = id;
+    fillModel(characterModel, character);
+
+    var modelSkills = characterModel.skills(); 
     _.each(character.skills, (skill, i) => {
       fillModel(modelSkills[i], skill);
     });
@@ -265,16 +295,41 @@ require(['lib/index'], (lib) => {
       saveAs(new Blob([json]), 'character.json');
     },
     characterFiles: ko.observable(),
-    loadCharacter: () => {
-      const blob = model.characterFiles()[0];
+    loadCharacter: (blob) => {
+      if (!blob) { return; }
+
       const fileReader = new FileReader();
       fileReader.onload = () => {
         const character = JSON.parse(fileReader.result);
+        if (!character._id) {
+          character._id = createId();
+        }
         setCharacter(character);
       };
       fileReader.readAsText(blob);
     }
   };
+
+  const firstCharacter = latestId && JSON.parse(store.get(latestId));
+  if (firstCharacter) {
+    setCharacter(firstCharacter);
+  }
+
+  const updateStorage = _.debounce(() => {
+    const characterModel = model.character();
+    const id = characterModel._id;
+    if (!id) { return; }
+
+    const characterJSON = ko.toJSON(characterModel);
+    insertId(id);
+    store.set(id, characterJSON);
+    console.log(id);
+  }, 1000);
+
+  ko.computed(() => {
+    ko.toJSON(model.character); // Subscribe to everything serialized.
+    updateStorage();
+  });
 
   ko.applyBindings(model);
 });

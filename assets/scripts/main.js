@@ -284,15 +284,10 @@ require(['lib/index'], (lib) => {
     
     notes: ''
   };
-  const createCharacter = () => {
-    const character = createModel(characterDescriptor);
-    character._id = createId();
-    return character;
-  };
+  const createCharacter = () => createModel(characterDescriptor);
 
   const characterSelector = (() => {
     const selectedId = ko.observable(store.get('_latestId') || null);
-    console.log(selectedId());
     selectedId.subscribe((id) => {
       store.set('_latestId', id);
     });
@@ -310,7 +305,6 @@ require(['lib/index'], (lib) => {
       if (!character) { return null; }
       
       const characterModel = createCharacter();
-      characterModel._id = character._id;
       fillModel(characterModel, character);
       
       var modelSkills = characterModel.skills(); 
@@ -325,8 +319,6 @@ require(['lib/index'], (lib) => {
       const id = selectedId();
       selectedId(null);
 
-      console.log(id, selectedId());
-
       removeId(id);
       store.remove(id);
     };
@@ -334,7 +326,6 @@ require(['lib/index'], (lib) => {
     const createSelectedCharacter = () => {
       const characterModel = createCharacter();
       const id = createId();
-      characterModel._id = id;
 
       store.set(id, JSON.stringify(characterModel));
       insertId(id);
@@ -345,13 +336,13 @@ require(['lib/index'], (lib) => {
       const characterModel = selectedCharacterModel();
       if (!characterModel) { return; }
 
-      const id = characterModel._id;
+      const id = selectedId();
       if (!id) { return; }
-  
+      
       const characterJSON = ko.toJSON(characterModel);
       store.set(id, characterJSON);
     }, 1000);
-  
+    
     ko.computed(() => {
       const characterModel = selectedCharacterModel();
       if (!characterModel) { return; }
@@ -359,7 +350,7 @@ require(['lib/index'], (lib) => {
       ko.toJSON(characterModel); // Subscribe to everything serialized.
       updateStorage();
     });
-  
+    
     return {
       selectedId,
       selectedCharacter,
@@ -376,16 +367,15 @@ require(['lib/index'], (lib) => {
   };
   const importCharacter = (blob) => {
     if (!blob) { return; }
-
+    
     const fileReader = new FileReader();
     fileReader.onload = () => {
       const character = JSON.parse(fileReader.result);
-      if (!character._id) {
-        character._id = createId();
-      }
+      const id = createId();
 
-      store.set(character._id, JSON.stringify(character));
-      insertId(character._id);
+      store.set(id, JSON.stringify(character));
+      insertId(id);
+      characterSelector.selectedId(id);
     };
     fileReader.readAsText(blob);
   };

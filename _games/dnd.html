@@ -312,7 +312,12 @@ title: "Dungeons & Dragons, 4e Character Sheet"
     <td>
       <select data-bind="value: characterSelector.selectedId, options: characterList, optionsText: 'name', optionsValue: 'id'"></select>
     </td>
-    <td><input type="button" value="Export Character" data-bind="click: exportCharacter" /></td>
+    <td>
+      <label>
+        Export Character<br />
+        <input type="button" value="Download" data-bind="click: exportCharacter" />
+      </label>
+    </td>
     <td>
       <label>
         Import Character<br />

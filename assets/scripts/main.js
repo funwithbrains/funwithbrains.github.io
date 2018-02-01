@@ -9,24 +9,45 @@ require(['lib/index'], (lib) => {
 
   const { _, ko, saveAs, Persist } = lib;
 
-  const store = new Persist.Store('DungeonsAndDragons4eCharacterSheets');
-  const ids = _.filter(JSON.parse(store.get('_ids'))) || [];
-  console.log(ids);
-  const insertId = (id) => {
-    if (!id || _.contains(ids, id)) { return; }
+  const refreshTrigger = ko.observable(true);
+  const refresh = () => {
+    refreshTrigger(!refreshTrigger());
+  };
 
-    ids.push(id);
-    store.set('_ids', JSON.stringify(ids));
+  const store = new Persist.Store('DungeonsAndDragons4eCharacterSheets');
+  const ids = ko.pureComputed(() => {
+    refreshTrigger();
+    return _.filter(JSON.parse(store.get('_ids'))) || [];
+  });
+  const insertId = (id) => {
+    const idList = ids();
+    if (!id || _.contains(idList, id)) { return; }
+
+    idList.push(id);
+    store.set('_ids', JSON.stringify(idList));
+    refresh();
   };
   const removeId = (id) => {
     if (!id) { return; }
 
     store.set('_ids', JSON.stringify(
-      _.filter(ids, (otherId) => id !== otherId)
+      _.filter(ids(), (otherId) => id !== otherId)
     ));
+    refresh();
   };
   const createId = () => `${Date.now()}|${Math.random()}`;
-  var latestId = store.get('_latestId') || null;
+
+  const characterList = ko.pureComputed(() => {
+    return _.union([{
+      id: null,
+      name: '----'
+    }], _.map(ids(), (id) => {
+      return {
+        id,
+        name: JSON.parse(store.get(id)).name
+      };
+    }))
+  });
 
   const createObservable = (model, options) => {
     if (_.isFunction(options)) {
@@ -265,71 +286,116 @@ require(['lib/index'], (lib) => {
   };
   const createCharacter = () => {
     const character = createModel(characterDescriptor);
-    character._id = null; // Do not save.
+    character._id = createId();
     return character;
   };
 
-  const character = ko.observable(createCharacter());
-
-  const setCharacter = (character) => {
-    const id = character._id;
-    if (latestId !== id) {
-      latestId = id;
-      store.set('_latestId', latestId);
-    }
-
-    var characterModel = model.character();
-    characterModel._id = id;
-    fillModel(characterModel, character);
-
-    var modelSkills = characterModel.skills(); 
-    _.each(character.skills, (skill, i) => {
-      fillModel(modelSkills[i], skill);
+  const characterSelector = (() => {
+    const selectedId = ko.observable(store.get('_latestId') || null);
+    console.log(selectedId());
+    selectedId.subscribe((id) => {
+      store.set('_latestId', id);
     });
+
+    const selectedCharacter = ko.pureComputed(() => {
+      const id = selectedId();
+      if (!id) { return null; }
+
+      refreshTrigger();
+
+      return JSON.parse(store.get(id));
+    });
+    const selectedCharacterModel = ko.computed(() => {
+      const character = selectedCharacter();
+      if (!character) { return null; }
+      
+      const characterModel = createCharacter();
+      characterModel._id = character._id;
+      fillModel(characterModel, character);
+      
+      var modelSkills = characterModel.skills(); 
+      _.each(character.skills, (skill, i) => {
+        fillModel(modelSkills[i], skill);
+      });
+
+      return characterModel;
+    });
+
+    const deleteSelectedCharacter = () => {
+      const id = selectedId();
+      selectedId(null);
+
+      console.log(id, selectedId());
+
+      removeId(id);
+      store.remove(id);
+    };
+
+    const createSelectedCharacter = () => {
+      const characterModel = createCharacter();
+      const id = createId();
+      characterModel._id = id;
+
+      store.set(id, JSON.stringify(characterModel));
+      insertId(id);
+      selectedId(id);
+    };
+
+    const updateStorage = _.debounce(() => {
+      const characterModel = selectedCharacterModel();
+      if (!characterModel) { return; }
+
+      const id = characterModel._id;
+      if (!id) { return; }
+  
+      const characterJSON = ko.toJSON(characterModel);
+      store.set(id, characterJSON);
+    }, 1000);
+  
+    ko.computed(() => {
+      const characterModel = selectedCharacterModel();
+      if (!characterModel) { return; }
+
+      ko.toJSON(characterModel); // Subscribe to everything serialized.
+      updateStorage();
+    });
+  
+    return {
+      selectedId,
+      selectedCharacter,
+      selectedCharacterModel,
+
+      createSelectedCharacter,
+      deleteSelectedCharacter
+    };
+  })();
+
+  const exportCharacter = () => {
+    const json = ko.toJSON(characterSelector.selectedCharacterModel);
+    saveAs(new Blob([json]), 'character.json');
+  };
+  const importCharacter = (blob) => {
+    if (!blob) { return; }
+
+    const fileReader = new FileReader();
+    fileReader.onload = () => {
+      const character = JSON.parse(fileReader.result);
+      if (!character._id) {
+        character._id = createId();
+      }
+
+      store.set(character._id, JSON.stringify(character));
+      insertId(character._id);
+    };
+    fileReader.readAsText(blob);
   };
 
-  const model = {
-    character,
-    saveCharacter: () => {
-      const json = ko.toJSON(character);
-      saveAs(new Blob([json]), 'character.json');
-    },
-    characterFiles: ko.observable(),
-    loadCharacter: (blob) => {
-      if (!blob) { return; }
+  ko.applyBindings({
+    characterSelector,
 
-      const fileReader = new FileReader();
-      fileReader.onload = () => {
-        const character = JSON.parse(fileReader.result);
-        if (!character._id) {
-          character._id = createId();
-        }
-        setCharacter(character);
-      };
-      fileReader.readAsText(blob);
-    }
-  };
+    exportCharacter,
+    importCharacter,
 
-  const firstCharacter = latestId && JSON.parse(store.get(latestId));
-  if (firstCharacter) {
-    setCharacter(firstCharacter);
-  }
-
-  const updateStorage = _.debounce(() => {
-    const characterModel = model.character();
-    const id = characterModel._id;
-    if (!id) { return; }
-
-    const characterJSON = ko.toJSON(characterModel);
-    insertId(id);
-    store.set(id, characterJSON);
-    console.log(id);
-  }, 1000);
-
-  ko.computed(() => {
-    ko.toJSON(model.character); // Subscribe to everything serialized.
-    updateStorage();
+    characterList
   });
-
-  ko.applyBindings(model);
 });

@@ -2,7 +2,7 @@
 title: "Dungeons & Dragons, 4e Character Sheet"
 ---
 
-<table data-bind="with: character">
+<table data-bind="with: characterSelector.selectedCharacterModel">
   <thead></thead>
   <tbody>
       <tr>
@@ -303,21 +303,31 @@ title: "Dungeons & Dragons, 4e Character Sheet"
 
 <table>
   <thead>
-      <tr>
-          <th>Export/Import</th>
-      </tr>
+    <tr>
+      <th>Switch Character</th>
+      <th>Export/Import</th>
+    </tr>
   </thead>
   <tbody>
-    <td><input type="button" value="Export Character" data-bind="click: saveCharacter" /></td>
+    <td>
+      <select data-bind="value: characterSelector.selectedId, options: characterList, optionsText: 'name', optionsValue: 'id'"></select>
+    </td>
+    <td><input type="button" value="Export Character" data-bind="click: exportCharacter" /></td>
     <td>
       <label>
-        Import Character
+        Import Character<br />
         <input type="file" data-bind="event: {
           change: () => {
-            loadCharacter($element.files[0]);
+            importCharacter($element.files[0]);
           }
         }" />
       </label>
+    </td>
+    <td>
+      <input type="button" value="Create a Character" data-bind="click: characterSelector.createSelectedCharacter" />
+    </td>
+    <td>
+      <input type="button" value="Delete Character" data-bind="click: characterSelector.deleteSelectedCharacter" />
     </td>
   </tbody>
 </table>

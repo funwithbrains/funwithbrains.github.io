@@ -1,15 +1,22 @@
-{% assign pages = include.pages | sort: 'order' %}
-{% for page in pages %}
-  <h2><a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></h2>
-  
-  {% if include.showDates != false && page.date != nil %}
-    <div>{{ page.date | date_to_long_string }}</div>
-  {% endif %}
-  
-  {% if include.showExcerpts != false && page.excerpt != nil %}
-    <p>{{ page.excerpt | truncatewords: 32 | strip_html }}</p>
-  {% endif %}
+{% assign sortedPages = include.pages | sort: 'order' %}
+{% for page in sortedPages %}
+  <div class="section filled-parent">
+    <h4>
+      <a href="{{ site.baseurl }}{{ page.url }}">
+        {{ page.title }}
+        <span class="fill-parent"></span>
+      </a>
+    </h4>
+      
+    {% if include.showDates != false && page.date != nil %}
+      <div>{{ page.date | date_to_long_string }}</div>
+    {% endif %}
 
+    {% if include.showExcerpts != false && page.excerpt != nil %}
+      <p>{{ page.excerpt | truncatewords: 32 | strip_html }}</p>
+    {% endif %}
+
+  </div>
   {% if include.showHorizontalRule != false %}
     {% unless forloop.last %}
       <hr />

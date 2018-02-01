@@ -1,0 +1,155 @@
+@import 'utils';
+
+a {
+  @include border-radius(0.25em);
+  color: $color-primary;
+
+  &:visited { color: $color-positive; }
+  &:hover {
+    text-decoration: underline;
+    color: $color-primary-light;
+  }
+  &:active {
+    text-decoration: underline;
+    color: $color-primary-dark;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0.25em;
+
+  font-family: $font-secondary;
+  font-weight: normal;
+  text-align: left;
+
+  a {
+    text-decoration: none;
+
+    &:visited { color: $color-positive; }
+    &:hover { color: $color-primary-light; }
+  }
+}
+
+h1 { font-size: 250%; }
+h2 { font-size: 200%; }
+h3 { font-size: 180%; }
+h4 { font-size: 160%; }
+h5 { font-size: 140%; }
+h6 { font-size: 120%; }
+
+p {
+  margin: 16px 8px 16px 28px;
+  font-size: 20px;
+  line-height: 1.5em;
+}
+
+ul, ol {
+  padding-left: 64px;
+}
+
+li {
+  ol & { list-style-type: decimal-leading-zero; }
+  ul & { list-style-type: disc; }
+}
+
+blockquote {
+  margin: 8px 64px;
+  padding: 8px;
+  border: solid 2px $color-secondary-dark;
+  @include border-radius(12px);
+  background: $color-secondary-dark-desaturated;
+  color: $color-negative;
+
+  p { margin: 16px; }
+
+  blockquote {
+    margin: 8px;
+    background: $color-negative;
+    color: $color-positive;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+hr {
+  margin: 40px auto;
+  width: 500px;
+
+  border-top: 1px solid $color-secondary-dark;
+}
+
+input, textarea {
+  margin: 2px;
+  padding: 2px;
+  @include border-radius(2px);
+}
+
+textarea {
+  height: 100%;
+  min-height: 5em;
+  width: 100%;
+}
+
+.section {
+  display: block;
+  margin: 16px;
+  padding: 16px;
+  border-bottom: 2px solid $color-primary-dark-desaturated;
+  @include border-radius(16px);
+}
+
+table {
+  margin: 2px;
+  padding: 2px;
+
+  th, td {
+    margin: 2px 4px;
+    padding: 2px 4px;
+
+    background-color: $color-negative-standout;
+
+    &:hover {
+      background-color: $color-negative-highlight;
+    }
+  }
+}
+
+.narrow-inputs {
+  input {
+    width: 5em;
+  }
+}
+
+.align {
+  position: relative;
+  overflow: hidden;
+
+  .outer {
+    float: left;
+    position: relative;
+    left: 50%;
+
+    .inner {
+      position: relative;
+      left: -50%;
+    }
+  }
+}
+
+.filled-parent {
+  position: relative;
+
+  .fill-parent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+}
+
+noscript {
+	text-align: center;
+}

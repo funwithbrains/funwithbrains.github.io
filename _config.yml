@@ -14,15 +14,13 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Fun With Brains
-email: funwithbrains@gmail.com
+short_title: FunWithBrains
 description: > # this means to ignore newlines until "baseurl:"
   We are brains. We seek fun. Maximum fun.
   We value fun complications, including challenges and accomplishments.
   If there is a way for everyone to have maximum fun, we want to know it.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://funwithbrains.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: funwithbrains
-github_username:  funwithbrains
 
 collections:
   mafia:
@@ -42,7 +40,6 @@ defaults:
 repository: funwithbrains/funwithbrains.github.io
 excerpt_separator: ----
 markdown: kramdown
-theme: jekyll-theme-hacker
 plugins:
   - jekyll-feed
 exclude:

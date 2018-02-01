@@ -1,0 +1,32 @@
+$color-brightness-variance: 20%;
+$color-saturation-variance: 40%;
+$color-positive: #fff;
+
+$color-negative: #000;
+$color-negative-off: #111;
+$color-negative-standout: #444;
+$color-negative-highlight: #222;
+
+$color-primary: #3344ff;
+$color-primary-light: lighten($color-primary, $color-brightness-variance);
+$color-primary-light-desaturated: desaturate($color-primary-light, $color-saturation-variance);
+$color-primary-dark: darken($color-primary, $color-brightness-variance);
+$color-primary-dark-desaturated: desaturate($color-primary-dark, $color-saturation-variance);
+
+$color-secondary: complement($color-primary);
+$color-secondary-light: lighten($color-secondary, $color-brightness-variance);
+$color-secondary-dark: darken($color-secondary, $color-brightness-variance);
+$color-secondary-dark-desaturated: desaturate($color-secondary-dark, $color-saturation-variance);
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+$font-primary: 'Times New Roman', Times, serif;
+$font-secondary: Arial, Helvetica, sans-serif;
+$font-decorative: 'Courier New', Courier, monospace;
+
+$imageurl: $baseurl + '/assets/images';

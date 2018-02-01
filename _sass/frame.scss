@@ -1,0 +1,94 @@
+@import 'utils';
+
+* {
+  margin: 0px;
+  padding: 0px;
+  border: none;
+}
+
+html {
+  background-color: $color-negative-off;
+  background-image: url($imageurl + '/frame/tile.png');
+  color: $color-positive;
+  font-family: $font-primary;
+}
+
+#mainMenu {
+  margin: 0px;
+  padding: 0px;
+  background-color: $color-negative;
+  background-image: url($imageurl + '/frame/tile-subtle.png');
+  font-family: $font-decorative;
+
+  a {
+    display: inline-block;
+    margin: 4px 1px 0px;
+    padding: 0.5em 1em;
+    min-width: 80px;
+    @include border-radius(12px 12px 0px 0px);
+
+    color: $color-positive;
+    text-decoration: none;
+    text-align: center;
+  }
+
+  a:hover {
+    background-color: $color-primary-dark;
+  }
+}
+
+#header {
+  display: block;
+  margin: 0px;
+  padding: 2px 30px;
+
+  border: solid $color-primary;
+  @include border-radius(0px);
+  border-width: 4px 0px;
+  background-color: $color-primary-dark;
+  
+  text-align: right;
+  font-family: $font-decorative;
+  text-decoration: none;
+  color: $color-positive;
+
+  &:hover {
+    border-color: $color-primary-light;
+    background-color: $color-primary;
+  }
+
+  &:active {
+    border-color: $color-primary;
+    background-color: $color-primary-dark;
+  }
+}
+
+#main {
+  position: relative;
+  margin: 0px auto -2em;
+  padding: 0px 0px;
+  width: 640px;
+  min-height: 800px;
+  overflow: auto; // prevent margin collapsing
+  @include border-radius(0px 0px 16px 16px);
+  background-color: $color-negative;
+  background-image: url($imageurl + '/frame/tile-hex-frame.png');
+  
+  #main-header {
+    font-family: $font-secondary;
+    font-size: 200%;
+    text-align: center;
+
+    div {
+      display: inline-block;
+      padding: 16px 64px;
+
+      background-color: $color-negative-off;
+      @include border-radius(0px 0px 8px 8px);
+    }
+  }
+}
+
+#footer {
+  margin: 40px auto 10px;
+}

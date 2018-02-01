@@ -1,32 +1,56 @@
 ---
 layout: compress
 ---
-<!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
+<!doctype html>
+<html>
   <head>
-    <meta charset='utf-8'>
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>
+      {% if page.title %}
+        {{ page.title }} - 
+      {% endif %}
+      {{ site.short_title }}
+    </title>
+
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    {% for url in page.styleUrls %}
+      <link rel="stylesheet" href="{{ url | append: '.css?v=' | append: site.github.build_revision | relative_url }}">
+    {% endfor %} 
 
-{% seo %}
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
   </head>
-
   <body>
-
-    <header>
-      <div class="container">
-        <h1>{{ site.title | default: site.github.repository_name }}</h1>
-        <h2>{{ site.description | default: site.github.project_tagline }}</h2>
+    <div id="mainMenu">
+      <div class="align">
+        <div class="outer">
+          <div class="inner">
+            {% for item in site.data.nav_items %}
+              <a href="{{ item.permalink | relative_url }}">{{ item.label }}</a>
+            {% endfor %}
+          </div>
+        </div>
       </div>
-    </header>
+    </div>
 
-    <div class="container">
-      <section id="main_content">
-        {{ content }}
+    <a id="header" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+    
+    <div id="main">
+      {% if page.title %}
+        <div id="main-header">
+          <div>{{ page.title }}</div>
+        </div>
+      {% endif %}
 
-        {% include footer.html %}
-      </section>
+      {{ content }}
+    </div>
+
+    <div id="footer">
     </div>
 
     {% if site.google_analytics %}

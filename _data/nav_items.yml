@@ -1,0 +1,9 @@
+- label: "About"
+  permalink: "/about/"
+
+- label: "Games"
+  permalink: "/games/"
+
+- label: "Tags"
+  permalink: "/tags/"
+

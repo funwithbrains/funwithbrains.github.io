@@ -1,4 +1,6 @@
 ---
 ---
 
-@import 'jekyll-theme-hacker';
+$baseurl: "{{ site.baseurl }}";
+
+@import 'main';

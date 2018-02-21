@@ -12,7 +12,9 @@ Vote for your lynch target by making a top-level comment on the Day post startin
 
 Whenever you cast a new vote, you cancel your previous vote.
 
-If you want to cancel your vote without making a new one, start your comment with something like "UNVOTE". Your vote comments don't need to be perfect. The GM will be reading these by sight.
+If you want to cancel your vote without making a new one, start your comment with something like "UNVOTE".
+
+Your votes might be counted by a GM-automation tool. If you want to be sure your vote is counted, please be sure it follows these guidelines.
 
 ----
 
@@ -90,9 +92,19 @@ If there is a tie for most votes, then one of those tied options will be selecte
 
 ----
 
+#### Anti-Town Random Tiebreak
+
+If there is a tie for most votes, then one of those tied options will be selected in such a way as to maximize harm to the town. Usually, this means that power roles will be lynched first. Next are vanilla roles. Finally scum.
+
+If the No-Lynch option is one of the tied options, then it wins.
+
+----
+
 #### Multi-Lynch Tiebreak
 
-If there is a tie for most votes, every one of those tied options will be selected. *(If one of the tied options is No-Lynch, then no one is lynched.)*
+If there is a tie for most votes, every one of those tied options will be selected.
+
+If the No-Lynch option is one of the tied options, then it wins.
 
 ----
 

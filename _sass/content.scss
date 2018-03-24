@@ -129,6 +129,12 @@ table {
   }
 }
 
+.tall-textareas {
+  textarea {
+    height: 24em;
+  }
+}
+
 .align {
   position: relative;
   overflow: hidden;

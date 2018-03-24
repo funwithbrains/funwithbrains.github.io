@@ -122,6 +122,13 @@ table {
   }
 }
 
+.dark-inputs {
+  input, textarea {
+    background-color: #000000;
+    color: #efaa00;
+  }
+}
+
 .align {
   position: relative;
   overflow: hidden;

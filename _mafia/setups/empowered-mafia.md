@@ -22,7 +22,7 @@ Next all empowered Amplifiers are resolved.
 
 Next, all other empowered roles are resolved.
 
-However, there is an exception: The Incarceration ability will resolve during last phase, but this ability can retroactively prevent a prior action from having resolved! If this would create a paradox, such as a Jailkeeper targeting an Empowerer who targeted them, then the later-resolving ability fails to take effect, in this case the Incarceration. In this example, it will then appear as if the Jailkeeper did not target anyone during the night in question.
+However, there is an exception: The Incarceration ability will resolve during the last phase, but this ability can retroactively prevent a prior action from having resolved! If this would create a paradox, such as a Jailkeeper targeting an Empowerer who targeted them, then the later-resolving ability fails to take effect, in this case the Incarceration. In this example, it will then appear as if the Jailkeeper did not target anyone during the night in question.
 
 ----
 

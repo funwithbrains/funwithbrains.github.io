@@ -40,6 +40,7 @@ The Town wins when there is at most one Mafia member, as long as the Mafia does 
 * **Murder**: Once per night, you may choose a member of your faction and choose a target player. At the end of the night, the chosen member of your faction kills your target.
 * **Desperation**: If no more than 2 of you remain, you may use your Murder ability twice per night.
 * **Meeting**: You have private communication with all members of your faction.
+* **Awareness**: At the start of the game, you will be told how many of each role is present in the game, except that one of the role counts will be too low by 1.
 
 **You win when your numbers equal or exceed the Town's numbers.**
 
@@ -47,7 +48,7 @@ The Town wins when there is at most one Mafia member, as long as the Mafia does 
 
 > #### Mafioso
 > 
-> You are a Mafioso! Your goal is to take over the Town. The only way to do that is by killing everyone. Only way. It's Mafia tradition. Good luck!
+> Your goal is to take over the Town. The only way to do that is by killing everyone. Only way. It's Mafia tradition. You are a Mafioso!
 
 ----
 
@@ -81,7 +82,7 @@ The Town wins when there is at most one Mafia member, as long as the Mafia does 
 >
 > You know what's going on better than anyone else. You are a Journalist!
 >
-> * **Awareness**: At the start of the game, you will be told which power roles are being used in the game.
+> * **Awareness**: At the start of the game, you will be told how many of each role is present in the game, except that one of the role counts will be too low by 1
 
 > #### Bodyguard
 >

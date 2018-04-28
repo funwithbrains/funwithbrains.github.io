@@ -9,6 +9,8 @@ require(['lib/index'], (lib) => {
 
   const { _, ko, saveAs, Persist } = lib;
 
+  const roll = d => Math.floor(1 + d * Math.random());
+
   const refreshTrigger = ko.observable(true);
   const refresh = () => {
     refreshTrigger(!refreshTrigger());
@@ -83,6 +85,7 @@ require(['lib/index'], (lib) => {
     modName: '',
     isTrained: false,
     misc: 0,
+    rolledValue: 0,
     value: function () {
       var character = this.character();
       return half(character.level()) + getArmorCheckPenalty(this) + this.misc() + character[this.modName()]() + (this.isTrained() ? 5 : 0);
@@ -93,11 +96,18 @@ require(['lib/index'], (lib) => {
   };
   var createSkill = function (character, options) {
     var skill = createModel(skillDescriptor);
+
     skill.character(character);
     _.each(options, function (value, key) {
       skill[key](value);
     });
+
+    skill.roll = () => {
+      skill.rolledValue(skill.value() + roll(20));
+    };
+
     skill.toJSON = skillToJSON;
+
     return skill;
   };
 

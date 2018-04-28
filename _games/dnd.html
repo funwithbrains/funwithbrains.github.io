@@ -251,6 +251,8 @@ styleUrls:
                           <th>Value</th>
                           <th>Trained</th>
                           <th>Misc</th>
+                          <th>Roll</th>
+                          <th></th>
                       </tr>
                   </thead>
                   <tbody data-bind="foreach: skills">
@@ -259,6 +261,8 @@ styleUrls:
                           <td data-bind="text: value"></td>
                           <td><input type="checkbox" data-bind="checked: isTrained" /></td>
                           <td><input type="text" data-bind="numericValue: misc" /></td>
+                          <td><span data-bind="text: rolledValue"></span></td>
+                          <td><button data-bind="click: roll">Roll</button></td>
                       </tr>
                   </tbody>
               </table>

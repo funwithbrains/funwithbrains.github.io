@@ -1,12 +1,12 @@
 {% assign sortedPages = include.pages | sort: 'order' %}
 {% for page in sortedPages %}
   <div class="section filled-parent">
-    <h4>
+    <h1>
       <a href="{{ site.baseurl }}{{ page.url }}">
         {{ page.title }}
         <span class="fill-parent"></span>
       </a>
-    </h4>
+    </h1>
       
     {% if include.showDates != false && page.date != nil %}
       <div>{{ page.date | date_to_long_string }}</div>

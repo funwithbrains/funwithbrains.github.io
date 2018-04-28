@@ -15,6 +15,13 @@ a {
   }
 }
 
+.outline {
+  @supports (-webkit-text-stroke: white 0px) {
+    -webkit-text-stroke: white 0.05em !important;
+    color: black !important;
+  }
+}
+
 h1, h2, h3, h4, h5, h6 {
   margin: 0.25em;
 
@@ -96,7 +103,7 @@ textarea {
   display: block;
   margin: 16px;
   padding: 16px;
-  border-bottom: 2px solid $color-primary-dark-desaturated;
+  box-shadow: 1px 1px 4px 1px $color-primary-dark-desaturated;
   @include border-radius(16px);
 }
 

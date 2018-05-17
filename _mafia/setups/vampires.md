@@ -8,7 +8,19 @@ Your village is aghast to find the mayor dead in the park, drained of all blood.
 
 Every day, you vote for a player to lynch, or for No-Lynch. The No-Lynch option will not be available when a player has been killed the previous night. *(No-Lynch is available on Day 1, because apparently no one really liked the mayor.)*
 
-Your village is without a mayor. If the day ends when there is a tie for most lynch votes, then the village will lynch one of the tied players at random.
+Your village is without a mayor. If the day ends when there is a tie for most lynch votes, then the vampires will use their subtle influence to determine which of the tied players gets lynched.
+
+***Beware! The vampires are conspiring to complete an ancient evil ritual. If they can determine the role of every surviving player, the village is doomed!***
+
+----
+
+## Schedule
+
+Days and nights will align with the days of the week.
+
+Monday and Tuesday together are one day. Thursday and Friday together are the next day.
+
+Wednesday alone will be a night, and Saturday and Sunday together will be the next night.
 
 ----
 
@@ -29,7 +41,8 @@ Each of these factions is an enemy with each other faction.
 * Drain: Once per night, one of you may kill one target non-Vampire player. It will be obvious that the death was caused by the Vampires.
 * Hypnosis: Once per night, one of you may cancel one target player's night plan.
 * Congregation: You have private communication with all members of your faction.
-* Perfect Hypnosis: If the village has helped the Scions of Death to die, then the Dark God will empower your Hypnosis to help the village die. Whenever you use Hypnosis, you may choose a role and a valid night plan for the chosen role. If the target of Hypnosis has the chosen role and the village has the Dark God's Favor, then instead of Hypnosis preventing the target's night plan, it will force the target to follow the night plan you chose.
+* Empowered Hypnosis: If the village has helped the Scions of Death to die, then the Dark God will empower your Hypnosis to help the village die. If the town has the Dark God's Favor, you may use Hypnosis twice per night.
+* Blood Ritual: Once per night, you may choose any number of roles for each surviving player. If each of those players has the chosen roles and only the chosen roles, you win the game!
 
 **If the last survivors are The Chosen One and a single Vampire, you lose. Otherwise, you win when your faction comprises at least half of the village, or if nothing can stop this from happening.**
 
@@ -38,6 +51,14 @@ Each of these factions is an enemy with each other faction.
 > #### Vampire
 > 
 > You are a Vampire! Your goal is to take over the village and drain every mortal therein. But for now, the villagers outnumber you. You will need to blend in while you thin the herd.
+
+> #### Treacherous Villager 
+>
+> You're fed up with the human world and ready to hand it all over to the Vampires! You are a Treacherous Villager!
+>
+> * Awareness: You know the identities of the Vampires, although they don't know yours.
+> * Outsider: You are not allowed to use any Vampire factional abilities.
+> * Distraction: Once per night, you may cancel one target player's night plan.
 
 ----
 
@@ -52,13 +73,16 @@ Each of these factions is an enemy with each other faction.
 
 ### Roles
 
-> ##### Villagers
+> ##### Faithful Villager
 >
-> You are a Villager. It's your duty to make sense of the evil events unfolding around you and use your gallows for great justice! There is a chance you could be The Chosen One or the Shaman, and you just don't know it yet.
+> When your allies are struck down, you will take up their mantle. However, there is a chance you could instead be The Chosen One or the Shaman, and you just don't know it yet. You are a Faithful Villager!
+>
+> * Ascension: Whenever a Priest, Paladin, Guard, or The Watcher dies, one random Faithful Villager will lose their Faithful Villager role and take on the role of that dead player.
+> * Conversion: Once per game, when a Scion of Death is killed by Vampires, one random Faithful Villager will lose their Faithful Villager role, leave the Village faction, take on the Scion of Death role, and join the Death Cult faction.
 
 > ##### The Chosen One
 >
-> You think you are an ordinary Villager. But in truth, you cannot be killed by Vampires! What's more, if only one Vampire survives, they cannot win without lynching you! If you are the last Villager alive when there is only one Vampire, the village wins. The Scions of Death already know your identity, even though you do not. If you die, everyone will learn that you were The Chosen One.
+> You think you are an ordinary Villager. But in truth, you cannot be killed by Vampires! What's more, if you are the last Villager alive when there is only one Vampire, the village wins. The Scions of Death already know your identity, even though you do not. If you die, everyone will learn that you were The Chosen One.
 >
 > * Vampire Resistance: If you would be killed by a Vampire ability, instead you are not.
 > * Conversion Resistance: If you would be recruited to another faction, instead you are not.
@@ -71,34 +95,33 @@ Each of these factions is an enemy with each other faction.
 
 > ##### Priest
 >
-> You are the Priest. While you have no ability to fight off evil, you do have the skills to detect it.
+> While you have no ability to fight off evil, you do have the skills to detect it. You are the Priest!
 >
 > * Investigation: Once per night, you may investigate one target player. You will receive results in the form of "Vampire"/"Not a Vampire".
 > * Paranoia Vulnerability: Be careful! If the Overzealous Paladin protects you, they will make you temporarily paranoid, and your Investigation for that night will result in "Vampire" no matter what!
 
 > ##### Overzealous Paladin
 >
-> You are the Paladin. While you have no ability to detect evil, you do have the skills to fight it.
+> While you have no ability to detect evil, you do have the skills to fight it. You are the Paladin!
 >
 > * Overzealous Protection: Once per night, you must protect one target player. Your target is protected from one kill by Vampires that night.
 > * Contagious Paranoia: Be careful! If you protect anyone who has Paranoia Vulnerability, you make them paranoid, and their actions that night will work incorrectly!
 
-> ##### Guard Captain
+> ##### Guard
 >
-> You are the Guard Captain. You recruit the locals to help you monitor the Village.
+> You keep your eyes open at night to learn where people are going. You are a Guard!
 >
-> * Recruitment: Twice per night, you may recruit another target player as a temporary Guard. This does not interfere with any other actions the target player would take. In a single night, you may not choose any single player more than once to recruit or to be followed. *(The village charter won't let you recruit anyone for a double shift, and it also won't let you have your guards followed or doubled up watching the same person. Those bureaucrats just don't understand what it's like on the streets!)*
-> * Paranoia Vulnerability: Be careful! If the Overzealous Paladin protects you, they will make you temporarily paranoid, and you will be unable to use your Recruitment that night!
+> * Observation: Once per night, you may follow one target player. You will see who your target's targets are, if any, but you will not learn what actions they performed.
 
-> ##### Guard (temporary only)
+> ##### Apothecary
 >
-> You have been recruited by the Guard Captain. This is a temporary role for one night only.
+> You visit people at night to administer drugs. You are an Apothecary!
 >
-> * Mandatory Observation: Tonight, you must follow a target player chosen for you by the Guard Captain. You will see who your target's targets are, if any, but you will not learn what actions they performed. *(This does not interfere with any actions you take using your original role.)*
+> * Treatment: Once per night, you may visit one target player. If the target is a villager and they are killed by a Vampire that night, then the Vampire will also die. If the target is a Vampire, then you will die.
 
 > ##### The Watcher
 >
-> You are the Watcher. You are charged with the task of finding The Chosen One and guiding them to protect the innocent from Vampires.
+> You are charged with the task of finding The Chosen One and guiding them to protect the innocent from Vampires. You are the Watcher!
 >
 > * Desperate Search: Once per night, you may investigate one target player. You will receive results in the form of "The Chosen One"/"Not The Chosen One". If your target is The Chosen One, they will learn that you contacted them, and they will become The Slayer in addition to their current role. *(The Slayer will still be The Chosen One, retaining each ability from that role.)*
 > * Paranoia Vulnerability: Be careful! If the Overzealous Paladin protects you, they will make you temporarily paranoid, and your Desperate Search for that night will result in "Not The Chosen One" no matter what!
@@ -118,10 +141,10 @@ Each of these factions is an enemy with each other faction.
 ### Factional Abilities
 
 * Dark God's Command: At the start of the game, you will learn the identity of The Chosen One.
-* Conversion (only usable if the game starts with 15 or more players): Once per game, during the night, one of you may recruit one target player to your faction. *(This ability will have no effect if your target is The Chosen One.)* The target player's role does not change. *(The target player will not lose their abilities.)* If the target is a member of the village faction, then they leave the village faction and exclusively join the Death Cult. Otherwise, they join the Death Cult in addition to their current faction. *(In this case, they will keep the abilities of their previous faction, like private communication. This is in addition to gaining access to the Death Cult factional abilities. This player can only win if The Death Cult and their original faction both win. The recruited player is not obligated to disclose their true role or otherwise cooperate with the Death Cult. The Death Cult is not obligated to tell this player the identity of The Chosen One.)*
+* Conversion (only usable if the game starts with 15 or more players): Once per game, during the night, one of you may recruit one target player to your faction. *(This ability will have no effect if your target is The Chosen One.)* The target player's role does not change. *(The target player will not lose their abilities.)* If the target is a member of the Village faction, then they leave the Village faction and exclusively join the Death Cult. Otherwise, they join the Death Cult in addition to their current faction. *(In this case, they will keep the abilities of their previous faction, like private communication, if they had them. This is in addition to gaining access to the Death Cult factional abilities. This player can only win if the Death Cult and their original faction both win. The recruited player is not obligated to disclose their true role or otherwise cooperate with the Death Cult. The Death Cult is not obligated to tell this player the identity of The Chosen One.)*
 * Congregation: You have private communication with all living and dead members of your faction.
 
-**You win when The Chosen One is eliminated and more than half of the Scions of Death have been killed by the village, in any order. *(This victory does not end the game or prevent other factions from winning.)***
+**You win when The Chosen One is eliminated and more Scions of Death have been killed by the village than the number of Scions of Death currently alive, in any order. *(This victory does not end the game or prevent other factions from winning.)***
 
 ### Roles
 
@@ -141,13 +164,10 @@ Each of these factions is an enemy with each other faction.
   * Death Reveal Interference
 * Day
   * Panic Lynch
-  * 72-Hour Deadline
-  * 24-Hour Delayed Majority Close
-  * Push Lynch
-  * Random Tiebreak
+  * 48-Hour Deadline
+  * Anti-Town Tiebreak
 * Night
-  * Check-In
-  * 24-Hour Deadline
+  * 24-Hour Deadline or 48-Hour Deadline
 
 ----
 
@@ -164,25 +184,25 @@ The minimum recommended number of players is 13.
 5. Priest
 6. Overzealous Paladin
 7. Guard Captain
-8. Villager
-9. Villager
-10. Villager
-11. Vampire
-12. Villager
+8. Faithful Villager
+9. Faithful Villager
+10. Faithful Villager
+11. Treacherous Villager
+12. Apothecary
 13. Scion of Death
 14. The Watcher
-15. Villager
-16. Villager
+15. Faithful Villager
+16. Faithful Villager
 17. Scion of Death
-18. Villager
-19. Villager
-20. Villager
+18. Faithful Villager
+19. Faithful Villager
+20. Faithful Villager
 21. Scion of Death
-22. Villager
-23. Villager
-24. Villager
+22. Treacherous Villager
+23. Faithful Villager
+24. Faithful Villager
 25. Scion of Death
-26. Villager
-27. Villager
+26. Faithful Villager
+27. Faithful Villager
 28. Vampire
 29. Scion of Death

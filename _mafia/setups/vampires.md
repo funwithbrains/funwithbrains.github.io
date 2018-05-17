@@ -117,7 +117,7 @@ Each of these factions is an enemy with each other faction.
 >
 > You visit people at night to administer drugs. You are an Apothecary!
 >
-> * Treatment: Once per night, you may visit one target player. If the target is a villager and they are killed by a Vampire that night, then the Vampire will also die. If the target is a Vampire, then you will die.
+> * Treatment: Once per night, you may visit one target player. If the target is a non-Vampire and they are killed by a Vampire that night, then that Vampire will die by poisoning. *(It will be clear that this Vampire died by poisoning rather than by other methods.)* If the target is a Vampire, then you will die as if killed by the Drain ability.
 
 > ##### The Watcher
 >

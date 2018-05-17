@@ -183,24 +183,24 @@ The minimum recommended number of players is 13.
 4. Shaman
 5. Priest
 6. Overzealous Paladin
-7. Guard Captain
+7. Guard
 8. Faithful Villager
 9. Faithful Villager
 10. Faithful Villager
 11. Treacherous Villager
-12. Apothecary
+12. Vampire
 13. Scion of Death
 14. The Watcher
-15. Faithful Villager
+15. Apothecary
 16. Faithful Villager
 17. Scion of Death
 18. Faithful Villager
 19. Faithful Villager
-20. Faithful Villager
+20. Guard
 21. Scion of Death
 22. Treacherous Villager
 23. Faithful Villager
-24. Faithful Villager
+24. Guard
 25. Scion of Death
 26. Faithful Villager
 27. Faithful Villager

@@ -123,6 +123,11 @@ table {
   }
 }
 
+button {
+  padding: 6px 12px;
+  border-radius: 3px;
+}
+
 .narrow-inputs {
   input {
     width: 5em;
@@ -133,6 +138,11 @@ table {
   input, textarea {
     background-color: #000000;
     color: #efaa00;
+  }
+
+  button {
+    background-color: #220;
+    color: gray;
   }
 }
 
